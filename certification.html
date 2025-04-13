@@ -6,10 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  
-     
 </head>
 <body>
     <header class="header">
@@ -19,48 +16,67 @@
           <a href="certification.html">Certification</a>
           <a href="contact.html">Contact</a>
         </nav>
-      </header>
+    </header>
    
-<section id="portfolio" class="portfolio-section">
-    <h2>Certificates</h2>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-            <div class="card">
-                <img src="2025-02-06.png" alt="card-img-top" class="project1">
-                <div class="certificates-gallery">
-                  <img src="2024-11-17.png" alt="Certificate 1">
+    <section id="portfolio" class="portfolio-section">
+        <h2>Certificates</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card" onclick="toggleCertificates(this)">
+                        <img src="2025-02-06.png" alt="card-img-top" class="card-img-top">
+                        <div class="certificates-gallery">
+                          <img src="2024-11-17.png" alt="Certificate 1" class="img-fluid">
+                        </div>
+                    </div>
                 </div>
-              </div>
-              </div>
 
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="UC-77b003d1-c490-4d0e-9fa6-285e78a3d7e2.jpg" class="card-img-top" alt="Project 2">
-                   <div class="certificates-gallery">
-                  
-                  <img src="UC-603c3168-2ad0-4a9e-aa06-e4ddfb14d97d.jpg" alt="Certificate 1">
-                  
-                  <img src="UC-b839eb9d-8c12-4151-9553-0a52e45787e7.jpg" alt="Certificate 2">
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card" onclick="toggleCertificates(this)">
+                        <img src="UC-77b003d1-c490-4d0e-9fa6-285e78a3d7e2.jpg" class="card-img-top" alt="Project 2">
+                        <div class="certificates-gallery">
+                          <img src="UC-603c3168-2ad0-4a9e-aa06-e4ddfb14d97d.jpg" alt="Certificate 1" class="img-fluid">
+                          <img src="UC-b839eb9d-8c12-4151-9553-0a52e45787e7.jpg" alt="Certificate 2" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
                 
-                </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="e2f5a7d75c416bb9e5ce49a63063e380.jpg" class="card-img-top" alt="Project 3">
-                    <div class="certificates-gallery">
-                        <img src="2025-02-03.png" alt="Certificate 1">
-                        
-                      </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card" onclick="toggleCertificates(this)">
+                        <img src="e2f5a7d75c416bb9e5ce49a63063e380.jpg" class="card-img-top" alt="Project 3">
+                        <div class="certificates-gallery">
+                            <img src="2025-02-03.png" alt="Certificate 1" class="img-fluid">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-  </section>
-  <a href="index.html" class="back-button">Back to Home</a>
-    
-  
+    </section>
+    <a href="index.html" class="back-button">Back to Home</a>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let isToggled = false; 
+
+        function toggleCertificates(card) {
+            const cards = document.querySelectorAll('.card');
+            if (!isToggled) {
+                // Hide all cards except the clicked one
+                cards.forEach(c => {
+                    if (c !== card) {
+                        c.style.display = 'none'; 
+                    }
+                });
+                isToggled = true;
+            } else {
+                // Show all cards again
+                cards.forEach(c => {
+                    c.style.display = 'block'; 
+                });
+                isToggled = false; 
+            }
+        }
+    </script>
 </body>
 </html>
