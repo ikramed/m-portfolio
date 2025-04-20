@@ -5,6 +5,10 @@ body, html {
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
   background-color: #f7dea9;
+  background-image: url('images.jpeg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 
@@ -50,7 +54,7 @@ body, html {
   width: 100%;
 }
 
-/
+/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
@@ -68,7 +72,7 @@ body, html {
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 20px;
   background: linear-gradient(to right, #c29535, #f6f0e5);
   -webkit-background-clip: text;
@@ -123,6 +127,7 @@ body, html {
   transform: scale(1.2) rotate(5deg);
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -142,7 +147,7 @@ footer a:hover {
   color: #ff7600;
 }
 
-
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
