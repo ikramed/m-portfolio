@@ -27,12 +27,9 @@ npx serve .
 
 
 
----
 
-### **Short About Me 
-```markdown
-## 👋 About Me
-Hi, I’m **Ikram Ed.dahby** — a Front-End Developer in training at ALX.  
+### Short About Me 
+Hi, I’m Ikram Ed.dahby, a Front-End Developer in training at ALX.  
 I build responsive and accessible web interfaces using **HTML, CSS, and JavaScript**. I’m currently learning React and improving my workflow with Git and component-based design.
 
 🎯 Goal: Ship 3 polished front-end projects in the next 4 months and contribute to open-source.  
